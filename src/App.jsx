@@ -20,6 +20,8 @@ import Brands from "./Components/Brands/Brands"
 import ForgotPassword from "./Pages/ForgotPassword/ForgotPassword"
 import VerifyCode from "./Pages/VerfiyCode/VerifyCode"
 import WishListContextProvider from "./Components/WishListContext/WishListContext"
+import { useEffect } from "react"
+import { initFlowbite } from "flowbite"
 
 
 
@@ -98,12 +100,16 @@ function App() {
 
 
   const queryClient = new QueryClient()
+useEffect(() => {
+ initFlowbite();
+}, [])
 
 
 
   return (
 
     <QueryClientProvider client={queryClient}>
+    
       <UserContextProvider>
 
 
