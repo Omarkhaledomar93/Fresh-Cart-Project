@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.row{
+    @apply flex flex-wrap
+}
+
+.container{
+    @apply mx-auto px-2
+}
+
+.product{
+    overflow: hidden;
+}
+.product:hover {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    border: solid 1px green;
+    border-radius: 10px;
+}
+.product .btn{
+
+    transition: transform 1s , opacity 1s;
+    transform:  translateX(-100%);
+    opacity: 0;
+    
+}
+
+.product:hover .btn{
+
+    opacity: 1;
+    transform: translateX(2%);
+} 
